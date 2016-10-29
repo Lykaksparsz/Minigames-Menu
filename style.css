@@ -1,0 +1,192 @@
+@font-face {
+	font-family: 'Uni Sans';
+	src: url(fonts/unisans-heavy.otf);
+	font-weight: bold;
+	font-weight: 600;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Open Sans', 'Arial', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	background: url(media/bg.png) center center fixed;
+	background-size: cover;
+}
+
+header {
+	/*position: relative;*/
+	float: left;
+	width: 100vw;
+	height: 100px;
+	/*background: #90a2e3;*/
+}
+
+header .header__inner {
+	width: 85vw;
+	height: inherit;
+	margin: 0 auto;
+	text-align: right;
+	/*background: #a6b2df;*/
+}
+
+.header__inner h2 {
+	margin-top: 45px;
+	margin-right: 20px;
+}
+
+.header__inner h2 a {
+	text-decoration: none;
+	font-family: 'Uni Sans';
+	font-size: 22px;
+	font-weight: 600;
+	
+	/*text-align: right;*/
+	color: #E3E7FF;
+}
+
+.header__inner h2 a:hover {
+	color: #fff;
+}
+
+.middle-section {
+	height: calc(100vh - 150px);
+	width: 100vw;
+	/*background: #5f74c1;*/
+	float: left;
+}
+
+.cards {
+	height: calc(100vh - 150px);
+	width: 85vw;
+	margin: 0 auto;
+	/*background: #7289da;*/
+}
+
+.column {
+	width: calc(85vw / 3);
+	height: calc(100vh - 150px);
+	float: left;
+}
+
+@media screen and (min-width: 1500px) {
+    .cards {
+    	width: 75vw;
+    }
+    .column {
+    	width: calc(75vw / 3);
+    }
+}
+
+.card {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:50px;
+	height: calc(50vh - 150px);
+	border-radius: 10px;
+	border: 4px dashed #fff;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+}
+
+@keyframes cardhover {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	10% {
+		transform: rotate(-1deg) scale(1.08);
+	}
+	20% {
+		transform: rotate(1deg) scale(1.08);
+	}
+	30% {
+		transform: rotate(-1deg) scale(1.08);
+	}
+	40% {
+		transform: rotate(1deg) scale(1.08);
+	}
+	50% {
+		transform: rotate(-1deg) scale(1.08);
+	}
+	60% {
+		transform: rotate(1deg) scale(1.08);
+	}
+	70% {
+		transform: rotate(-1deg) scale(1.08);
+	}
+	80% {
+		transform: rotate(1deg) scale(1.08);
+	}
+	90% {
+		transform: rotate(-1deg) scale(1.08);
+	}
+	100% {
+		transform: rotate(0deg) scale(1.08);
+	}
+}
+
+.card.active:hover {
+	animation: cardhover 1.2s;
+	animation-fill-mode: forwards;
+	cursor: pointer;
+}
+
+.card.top.middle {
+	cursor: not-allowed;
+}
+
+.card .card__content {
+	height: calc(100% - 50px);
+	background-size: cover !important;
+}
+
+.card.top.left .card__content {
+	background: url(media/flappywumpus.png) center center;
+}
+
+.card.top.middle .card__content {
+	background: url(media/angrywumpus.png) center center;
+}
+
+.card .card__title {
+	font-family: 'Uni Sans';
+	font-weight: 600;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+
+	line-height: 50px;
+	vertical-align: middle;
+
+	height: 50px;
+	width: 100%;
+	transform: translateX(-4px);
+
+	background: #7289DA;
+
+	border: 4px dashed #fff;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.card.inactive{
+	border: 4px dashed rgba(255,255,255,0.25);
+	background: rgba(105, 151, 255, 0.2);
+}
+
+.card.inactive .card__title {
+	border: none;
+	background: none;
+}
+
+footer {
+	height: 50px;
+	width: 100vw;
+	float: left;
+}
