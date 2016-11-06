@@ -154,6 +154,10 @@ header .header__inner {
 	background: url(media/angrywumpus.png) center center;
 }
 
+.card.top.right .card__content {
+	background: url(media/WUMPUSEXECover.png) center center;
+}
+
 .card .card__title {
 	font-family: 'Uni Sans';
 	font-weight: 600;
